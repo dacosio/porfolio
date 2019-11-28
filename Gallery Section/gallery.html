@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="/app.css/favicon.ico" />
+  <title>Don Cosio | Gallery</title>
+  <link rel="stylesheet" href="./gallery.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap cdns -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+  
+ 
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!--------------- navbar starts here --------------->
+    <nav>
+      <span id="brand">
+        <a href="/index.html">don</a>
+      </span>
+
+      <ul id="menu">
+        <li><a href="/index.html">home<span>.</span></a></li>
+        <li><a href="/Gallery Section/gallery.html">about me<span>.</span></a></li>
+        <!-- <li><a href="#">about me<span>.</span></a></li> -->
+        <li><a href="/contact.html">contact<span>.</span></a></li>
+      </ul>
+
+      <div id="toggle">
+        <div class="span">menu</div>
+      </div>
+
+    </nav>
+
+    <div id="resize">
+      <div class="close-btn">close</div>
+
+      <ul id="menu">
+        <li><a href="/index.html">home<span>.</span></a></li>
+        <li><a href="/Gallery Section/gallery.html">about me<span>.</span></a></li>
+        <li><a href="/contact.html">contact<span>.</span></a></li>
+      </ul>
+    </div>
+    <!--------------- navbar ends here --------------->
+
+
+
+    <!--------------- image gallery stars here --------------->
+    <div class="gallery-section">
+      <div class="inner-width text-center">
+          <br><br>
+          <div>
+              <span>a</span>
+              <span>b</span>
+              <span>o</span>
+              <span>u</span>
+              <span>t</span>
+            </div>
+
+          <div><hr class="style-four"></div>
+        <div>"<strong>don cosio </strong> is a telecomms designer delved into software engineering"</div>
+        <div><br></div>
+
+        <div class="gallery">
+
+          <a href="/app.css/img2.JPG" class="image">
+            <img src="/app.css/img2.JPG" alt="">
+          </a>
+
+          <a href="/app.css/img10.jpg" class="image">
+            <img src="/app.css/img10.jpg" alt="">
+          </a>
+
+          <a href="/app.css/img8.jpg" class="image">
+            <img src="/app.css/img8.jpg" alt="">
+          </a>
+
+          <a href="/app.css/img6.jpg" class="image">
+            <img src="/app.css/img6.jpg" alt="">
+          </a>
+
+          <a href="/app.css/img13.jpg" class="image">
+            <img src="/app.css/img13.jpg" alt="">
+          </a>
+
+          <a href="/app.css/img3.JPG" class="image">
+            <img src="/app.css/img3.JPG" alt="">
+          </a>
+
+          <a href="/app.css/img14.JPG" class="image">
+            <img src="/app.css/img14.JPG" alt="">
+          </a>
+
+          <a href="/app.css/img7.jpg" class="image">
+            <img src="/app.css/img7.jpg" alt="">
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+<!--------------- image gallery ends here --------------->
+    <script>
+      $(".gallery").magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+          enabled: true
+        }
+      });
+    </script>
+    <!-- greensock cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+      // navigation starts here
+
+      $("#toggle").click(function () {
+        $(this).toggleClass('on');
+        $("#resize").toggleClass("active");
+      });
+
+      $("#resize ul li a").click(function () {
+        $(this).toggleClass('on');
+        $("#resize").toggleClass("active");
+      });
+
+      $(".close-btn").click(function () {
+        $(this).toggleClass('on');
+        $("#resize").toggleClass("active");
+      });
+
+   
+
+      // navigation ends here
+
+      // nav animation
+
+      TweenMax.from("#brand", 1, {
+        delay: 0.4,
+        y: 10,
+        opacity: 0,
+        ease: Expo.easeInOut
+      })
+
+      TweenMax.staggerFrom("#menu li a", 1, {
+        delay: 0.4,
+        opacity: 0,
+        ease: Expo.easeInOut
+      }, 0.1);
+
+      // nav animation ends
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/main.js"></script>
+   
+
+ 
+
+</body>
+
+</html>
